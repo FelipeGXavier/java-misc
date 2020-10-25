@@ -8,7 +8,7 @@ public class Application {
     public static void main(String[] args) throws IOException {
 
         FileParser<Employee> blockingCsvParser = new BlockingCsvParser();
-        String path = new File(".").getCanonicalPath() +  "\\bin\\employees.csv";
+        var path = new File(".").getCanonicalPath() +  "\\bin\\employees.csv";
         blockingCsvParser.parseFile(path);
         blockingCsvParser = new BlockingApacheCommonCsvParser();
         blockingCsvParser.parseFile(path);
